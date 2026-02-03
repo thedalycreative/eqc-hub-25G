@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quokka Squad 25g | Equinim College</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,17 +12,19 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand" aria-label="Quokka Squad Home">
+            <a href="index.html" class="nav-brand">
                 <span class="quokka-emoji">🦘</span>
                 <span class="brand-text">Quokka Squad 25g</span>
             </a>
             <ul class="nav-links">
+                <li><a href="index.html#overview" class="active">Home</a></li>
                 <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="typing-test.html">Typing Test</a></li>
+                <li><a href="courses.html">2026 Subjects</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="noticeboard.html">Noticeboard</a></li>
-                <li><a href="backstage.html" class="nav-vip-btn">VIP Access</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="profiles.html">Profiles</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="daily-checklist.html">Daily Checklist</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -31,9 +33,9 @@
         <div class="hero-content">
             <h1>G'day Quokkas! 🌊</h1>
             <p class="hero-subtitle">Welcome to your Class Hub</p>
-            <p class="hero-description">Everything for Intake 25g in one place: schedules, resources, and quick links for your day‑to‑day learning journey.</p>
+            <p class="hero-description">Everything for Intake 25g in one place: schedules, resources, and quick links for your learning journey.</p>
             <div class="hero-buttons">
-                <a href="#overview" class="btn btn-primary">Jump to Quick Links</a>
+                <a href="#overview" class="btn btn-primary">Jump to Overview</a>
                 <a href="schedule.html" class="btn btn-secondary">View Schedule</a>
             </div>
         </div>
@@ -66,7 +68,7 @@
                     </div>
                     <div class="course-card">
                         <div class="card-icon">🚀</div>
-                        <h3>Back‑end Development</h3>
+                        <h3>Back-end Development</h3>
                         <p>Node/Express intro & API integration</p>
                     </div>
                     <div class="course-card">
@@ -89,7 +91,7 @@
                     <div class="info-card">
                         <h3>🗓️ Class Times</h3>
                         <p><strong>Monday, Tuesday, Friday</strong></p>
-                        <p>9:00 AM - 2:00 PM AWST</p>
+                        <p>9:30 AM - 2:00 PM AWST</p>
                         <p class="info-note">Started: 10 October 2025</p>
                         <a href="schedule.html" class="btn-link">View Full Schedule →</a>
                     </div>
@@ -100,58 +102,10 @@
                         <p class="info-note">Face-to-face classes</p>
                     </div>
                     <div class="info-card">
-                        <h3>⌨️ Daily Challenge</h3>
-                        <p><strong>MonkeyType Practice</strong></p>
-                        <p>Track your WPM progress</p>
-                        <p class="info-note">Submit scores daily</p>
-                        <a href="typing-test.html" class="btn-link">Go to Scoreboard →</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="links-section">
-            <div class="container">
-                <h2 id="links">🔗 Useful Links</h2>
-                <div class="links-grid">
-                    <div class="link-category">
-                        <h3>🎓 Class Access</h3>
-                        <ul>
-                            <li><a href="https://study.equinimcollege.com/login" target="_blank">Equinim Student Hub</a></li>
-                            <li><a href="https://chat.whatsapp.com/YOUR_WHATSAPP_LINK" target="_blank">Class WhatsApp Group</a></li>
-                            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
-                            <li><a href="https://google.com/colab" target="_blank">Google Colab</a></li>
-                            <li><a href="typing-test.html">Class Typing Scoreboard</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-category">
-                        <h3>📖 Learning Resources</h3>
-                        <ul>
-                            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
-                            <li><a href="https://www.w3.org/WAI/standards-guidelines/" target="_blank">W3 Accessibility Standards</a></li>
-                            <li><a href="https://getbootstrap.com/" target="_blank">GetBootstrap Docs</a></li>
-                            <li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
-                            <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-category">
-                        <h3>🛠️ Tools & Assets</h3>
-                        <ul>
-                            <li><a href="https://www.flaticon.com/" target="_blank">Flaticon</a></li>
-                            <li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a></li>
-                            <li><a href="https://fonts.google.com/icons" target="_blank">Google Icons</a></li>
-                            <li><a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a></li>
-                            <li><a href="https://www.figma.com/" target="_blank">Figma</a></li>
-                            <li><a href="https://monkeytype.com/" target="_blank">MonkeyType</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-category">
-                        <h3>🔌 VS Code Extensions</h3>
-                        <ul>
-                            <li><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier (Code Formatter)</a></li>
-                            <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server (Go Live)</a></li>
-                            <li><a href="https://marketplace.visualstudio.com/items?itemName=GitHub.copilot" target="_blank">GitHub Copilot</a></li>
-                        </ul>
+                        <h3>📖 Course Guide</h3>
+                        <p><strong>Policies & Info</strong></p>
+                        <p>Attendance, lateness, and class culture</p>
+                        <a href="schedule.html" class="btn-link">Learn More →</a>
                     </div>
                 </div>
             </div>
@@ -159,33 +113,24 @@
 
         <section class="contact-section" id="contact">
             <div class="container">
-                <h2>📬 Contact</h2>
-                <p class="contact-intro">Questions, extensions, or tech help—reach out early.</p>
+                <h2>📬 Need Help?</h2>
+                <p class="contact-intro">Know who to reach out to:</p>
                 <div class="contact-grid">
                     <div class="contact-card">
                         <h3>👨‍🏫 Your Trainer - Tim</h3>
-                        <p><strong>Email:</strong> <a href="mailto:tim@equinimcollege.com">tim@equinimcollege.com</a></p>
-                        <p><strong>Mobile:</strong> <a href="tel:+61414265050">0414 265 050</a></p>
+                        <p>Questions about coursework, technical help, or class matters</p>
+                        <a href="contact.html" class="btn-link">View Contact Info →</a>
                     </div>
                     <div class="contact-card">
                         <h3>🏫 College Support</h3>
-                        <p><strong>Training/Course:</strong> <a href="mailto:trainer@equinimcollege.com">trainer@equinimcollege.com</a></p>
-                        <p><strong>Attendance/Deferrals:</strong> <a href="mailto:team@equinimcollege.com">team@equinimcollege.com</a></p>
+                        <p>Administrative issues, formal complaints, or enrollment questions</p>
+                        <a href="contact.html" class="btn-link">View All Contacts →</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="chat-section">
-            <div class="container">
-                <h2>💬 EQC Web Dev Mate (25g)</h2>
-                <p class="contact-intro">Your AI learning assistant for backend web dev questions</p>
-                <div class="chat-container">
-                    <div id="chat" class="chat"></div>
-                    <form id="chat-form">
-                        <input id="chat-input" type="text" placeholder="Ask a question…" autocomplete="off" required>
-                        <button type="submit">Send</button>
-                    </form>
+                    <div class="contact-card">
+                        <h3>👥 Join the Squad</h3>
+                        <p>Meet your classmates and build connections</p>
+                        <a href="profiles.html" class="btn-link">View Profiles →</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -202,61 +147,5 @@
             <p>Equinim College • Intake 25g</p>
         </div>
     </footer>
-
-    <script>
-    // === CONFIG ===
-    const LOGGER_URL = "https://script.google.com/macros/s/AKfycbx_C0KmAw2JA6JhF0qhIEYRz1PQluODLD8efQM0v4XmE82bS9OAR-AwYItS3Xoyd-ZI/exec";
-    const sessionId = crypto.randomUUID();
-
-    // === CHAT FUNCTIONALITY ===
-    const chatEl = document.getElementById("chat");
-    const formEl = document.getElementById("chat-form");
-    const inputEl = document.getElementById("chat-input");
-
-    function addMsg(text, who) {
-      const row = document.createElement("div");
-      row.className = "row";
-      const msg = document.createElement("div");
-      msg.className = "msg " + who;
-      msg.textContent = text;
-      row.appendChild(msg);
-      chatEl.appendChild(row);
-      chatEl.scrollTop = chatEl.scrollHeight;
-    }
-
-    formEl.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const q = inputEl.value.trim();
-      if (!q) return;
-      addMsg(q, "u");
-      inputEl.value = "";
-
-      // Simulate response from EQC Web Dev Mate (placeholder for now)
-      const reply = "Thanks for your question! (This is where EQC Web Dev Mate's reply will appear.)";
-
-      addMsg(reply, "a");
-
-      // === LOG TO GOOGLE SHEETS ===
-      try {
-        await fetch(LOGGER_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            student_id: "auto-logged",
-            topic: "general",
-            question: q,
-            response_summary: reply.slice(0, 300),
-            resources_links: [],
-            session_id: sessionId
-          }),
-          mode: "no-cors"
-        });
-      } catch (err) {
-        console.error("Logging error:", err);
-      }
-    });
-
-    addMsg("Hi there! I'm your EQC Web Dev Mate (25g). Ask me about anything in your backend web dev course.", "a");
-    </script>
 </body>
 </html>

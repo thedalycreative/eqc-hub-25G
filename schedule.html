@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class Schedule | Quokka Squad 25g</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,16 +12,19 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand" aria-label="Quokka Squad Home">
+            <a href="index.html" class="nav-brand">
                 <span class="quokka-emoji">🦘</span>
                 <span class="brand-text">Quokka Squad 25g</span>
             </a>
             <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="schedule.html" class="active">Schedule</a></li>
-                <li><a href="typing-test.html">Typing Test</a></li>
+                <li><a href="courses.html">2026 Subjects</a></li>
                 <li><a href="resources.html">Resources</a></li>
-                <li><a href="noticeboard.html">Noticeboard</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="profiles.html">Profiles</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="daily-checklist.html">Daily Checklist</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -35,12 +37,11 @@
     </header>
 
     <main>
-        <section class="schedule-section">
+        <section class="schedule-section" style="padding: 3rem 0;">
             <div class="container">
-                <!-- Weekly Schedule -->
-                <div class="schedule-card">
-                    <h2>🗓️ Weekly Class Times</h2>
-                    <p class="schedule-intro">On-campus learning at Equinim College</p>
+                <div class="card">
+                    <h2 style="text-align: left; margin-bottom: 1rem;">🗓️ Weekly Class Times</h2>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;">On-campus learning at Equinim College</p>
                     
                     <div class="weekly-schedule">
                         <div class="day-card active">
@@ -49,258 +50,80 @@
                                 <h3>Monday</h3>
                             </div>
                             <div class="time-info">
-                                <p class="time">9:00 AM - 2:00 PM</p>
-                                <p class="duration">5 hours</p>
+                                <p class="time">9:30 AM - 2:00 PM</p>
+                                <p style="font-size: 0.9rem; opacity: 0.9;">4.5 hours</p>
                             </div>
                         </div>
-
                         <div class="day-card active">
                             <div class="day-header">
                                 <span class="day-icon">💻</span>
                                 <h3>Tuesday</h3>
                             </div>
                             <div class="time-info">
-                                <p class="time">9:00 AM - 2:00 PM</p>
-                                <p class="duration">5 hours</p>
+                                <p class="time">9:30 AM - 2:00 PM</p>
+                                <p style="font-size: 0.9rem; opacity: 0.9;">4.5 hours</p>
                             </div>
                         </div>
-
                         <div class="day-card inactive">
                             <div class="day-header">
                                 <h3>Wednesday</h3>
                             </div>
                             <div class="time-info">
-                                <p class="no-class">No Class</p>
+                                <p style="font-size: 1rem; font-weight: 600; font-style: italic;">No Class</p>
                             </div>
                         </div>
-
                         <div class="day-card inactive">
                             <div class="day-header">
                                 <h3>Thursday</h3>
                             </div>
                             <div class="time-info">
-                                <p class="no-class">No Class</p>
+                                <p style="font-size: 1rem; font-weight: 600; font-style: italic;">No Class</p>
                             </div>
                         </div>
-
                         <div class="day-card active">
                             <div class="day-header">
                                 <span class="day-icon">🚀</span>
                                 <h3>Friday</h3>
                             </div>
                             <div class="time-info">
-                                <p class="time">9:00 AM - 2:00 PM</p>
-                                <p class="duration">5 hours</p>
+                                <p class="time">9:30 AM - 2:00 PM</p>
+                                <p style="font-size: 0.9rem; opacity: 0.9;">4.5 hours</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="schedule-note">
-                        <p><strong>Started:</strong> 10 October 2025</p>
-                        <p><strong>Time Zone:</strong> AWST (Australian Western Standard Time)</p>
-                        <p><strong>Total Hours:</strong> 15 hours per week</p>
+                    <div style="background: var(--background); padding: 1.5rem; border-radius: 10px; border-left: 5px solid var(--primary-color); margin-top: 2rem;">
+                        <p style="margin-bottom: 0.5rem; color: var(--text-dark);"><strong>Started:</strong> 10 October 2025</p>
+                        <p style="margin-bottom: 0.5rem; color: var(--text-dark);"><strong>Time Zone:</strong> AWST (Australian Western Standard Time)</p>
+                        <p style="color: var(--text-dark);"><strong>Total Hours:</strong> 13.5 hours per week</p>
                     </div>
                 </div>
 
-                <!-- Term Dates -->
-                <div class="term-dates-card">
-                    <h2>📆 Term Dates 2025-2026</h2>
-                    <p class="dates-intro">Important dates for your calendar</p>
+                <div class="card" style="margin-top: 2rem;">
+                    <h2 style="text-align: left; margin-bottom: 1rem;">📋 Class Policies</h2>
                     
-                    <div class="term-grid">
-                        <div class="term-card">
-                            <div class="term-header">
-                                <span class="term-icon">🌸</span>
-                                <h3>Term 4, 2025</h3>
-                            </div>
-                            <div class="term-dates">
-                                <p><strong>Starts:</strong> 10 October 2025</p>
-                                <p><strong>Ends:</strong> 19 December 2025</p>
-                                <p class="term-status current">Currently in progress</p>
-                            </div>
-                        </div>
-
-                        <div class="term-card">
-                            <div class="term-header">
-                                <span class="term-icon">🎄</span>
-                                <h3>Summer Break</h3>
-                            </div>
-                            <div class="term-dates">
-                                <p><strong>Starts:</strong> 20 December 2025</p>
-                                <p><strong>Ends:</strong> 1 February 2026</p>
-                                <p class="term-status break">No classes</p>
-                            </div>
-                        </div>
-
-                        <div class="term-card">
-                            <div class="term-header">
-                                <span class="term-icon">🌞</span>
-                                <h3>Term 1, 2026</h3>
-                            </div>
-                            <div class="term-dates">
-                                <p><strong>Starts:</strong> 2 February 2026</p>
-                                <p><strong>Ends:</strong> 9 April 2026</p>
-                                <p class="term-status upcoming">Upcoming</p>
-                            </div>
-                        </div>
-
-                        <div class="term-card">
-                            <div class="term-header">
-                                <span class="term-icon">🍂</span>
-                                <h3>Mid-Year Break</h3>
-                            </div>
-                            <div class="term-dates">
-                                <p><strong>Duration:</strong> 2 weeks</p>
-                                <p class="term-note">Dates TBA</p>
-                            </div>
-                        </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="color: var(--dark-accent); margin-bottom: 0.8rem; font-size: 1.2rem;">📌 Attendance Requirements</h3>
+                        <p><strong>Minimum 70% Attendance Required</strong> to pass the course</p>
+                        <p style="color: var(--text-light); margin: 0.8rem 0;">This isn't just a rule—we want to see you and code together! Your presence matters for group learning, collaboration, and making the most of your vocational education.</p>
+                        <ul style="margin-left: 1.5rem; color: var(--text-light);">
+                            <li>Regular attendance builds professional habits</li>
+                            <li>You'll miss key concepts and peer collaboration if absent</li>
+                            <li>Team dynamics and group projects depend on your participation</li>
+                        </ul>
                     </div>
-                </div>
 
-                <!-- Public Holidays -->
-                <div class="holidays-card">
-                    <h2>🎉 WA Public Holidays</h2>
-                    <p class="holidays-intro">No classes on these dates</p>
-                    
-                    <div class="holidays-list">
-                        <div class="holiday-item">
-                            <span class="holiday-icon">🎄</span>
-                            <div class="holiday-info">
-                                <h3>Christmas Day</h3>
-                                <p>25 December 2025</p>
-                            </div>
-                        </div>
-
-                        <div class="holiday-item">
-                            <span class="holiday-icon">🎁</span>
-                            <div class="holiday-info">
-                                <h3>Boxing Day</h3>
-                                <p>26 December 2025</p>
-                            </div>
-                        </div>
-
-                        <div class="holiday-item">
-                            <span class="holiday-icon">🎆</span>
-                            <div class="holiday-info">
-                                <h3>New Year's Day</h3>
-                                <p>1 January 2026</p>
-                            </div>
-                        </div>
-
-                        <div class="holiday-item">
-                            <span class="holiday-icon">🇦🇺</span>
-                            <div class="holiday-info">
-                                <h3>Australia Day</h3>
-                                <p>26 January 2026</p>
-                            </div>
-                        </div>
-
-                        <div class="holiday-item">
-                            <span class="holiday-icon">⚓</span>
-                            <div class="holiday-info">
-                                <h3>Western Australia Day</h3>
-                                <p>1 June 2026</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Typical Day Structure -->
-                <div class="day-structure-card">
-                    <h2>⏰ Typical Class Day</h2>
-                    <p class="structure-intro">What to expect during a class session</p>
-                    
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-time">9:00 AM</div>
-                            <div class="timeline-content">
-                                <h3>🌅 Class Begins & Daily Typing Challenge</h3>
-                                <p>Start with MonkeyType warm-up and submit your daily score</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">9:15 AM</div>
-                            <div class="timeline-content">
-                                <h3>📚 Lesson Introduction</h3>
-                                <p>Review previous topics and introduce today's concepts</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">10:00 AM</div>
-                            <div class="timeline-content">
-                                <h3>💻 Hands-on Coding</h3>
-                                <p>Work through examples and exercises together</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">11:00 AM</div>
-                            <div class="timeline-content">
-                                <h3>☕ Morning Break</h3>
-                                <p>15-minute break to recharge</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">11:15 AM</div>
-                            <div class="timeline-content">
-                                <h3>🛠️ Project Work & Practice</h3>
-                                <p>Build projects and apply what you've learned</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">12:30 PM</div>
-                            <div class="timeline-content">
-                                <h3>🍕 Lunch Break</h3>
-                                <p>30-minute lunch break</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">1:00 PM</div>
-                            <div class="timeline-content">
-                                <h3>🚀 Advanced Topics & Q&A</h3>
-                                <p>Dive deeper, troubleshoot, and ask questions</p>
-                            </div>
-                        </div>
-
-                        <div class="timeline-item">
-                            <div class="timeline-time">2:00 PM</div>
-                            <div class="timeline-content">
-                                <h3>🎯 Class Wrap-up</h3>
-                                <p>Review key takeaways and preview next session</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Important Reminders -->
-                <div class="reminders-card">
-                    <h2>💡 Important Reminders</h2>
-                    <div class="reminders-grid">
-                        <div class="reminder-item">
-                            <span class="reminder-icon">⏰</span>
-                            <h3>Arrive on Time</h3>
-                            <p>Classes start promptly at 9:00 AM</p>
-                        </div>
-                        <div class="reminder-item">
-                            <span class="reminder-icon">💻</span>
-                            <h3>Bring Your Laptop</h3>
-                            <p>Charged and ready with VS Code installed</p>
-                        </div>
-                        <div class="reminder-item">
-                            <span class="reminder-icon">📧</span>
-                            <h3>Communication</h3>
-                            <p>Check emails and class announcements regularly</p>
-                        </div>
-                        <div class="reminder-item">
-                            <span class="reminder-icon">🤒</span>
-                            <h3>Absences</h3>
-                            <p>Contact Tim or the college if you can't attend</p>
-                        </div>
+                    <div>
+                        <h3 style="color: var(--dark-accent); margin-bottom: 0.8rem; font-size: 1.2rem;">⏱️ Lateness & Early Departures</h3>
+                        <p><strong>Lateness is okay if there's a valid reason</strong></p>
+                        <p style="color: var(--text-light); margin: 0.8rem 0;">We understand life happens. Just keep us in the loop:</p>
+                        <ul style="margin-left: 1.5rem; color: var(--text-light); margin-bottom: 1.5rem;">
+                            <li><strong>Text Tim</strong> to let him know if you'll be late</li>
+                            <li><strong>Provide a reason</strong> (traffic, personal issue, etc.)</li>
+                            <li><strong>Aim to catch up</strong> on missed content</li>
+                        </ul>
+                        <p><strong>Early Departures</strong></p>
+                        <p style="color: var(--text-light);">If you need to leave early, get approval from the trainer first. Only trainers can dismiss class early.</p>
                     </div>
                 </div>
             </div>

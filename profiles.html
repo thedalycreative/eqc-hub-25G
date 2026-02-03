@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiles | Quokka Squad 25g</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="quokka-emoji">🦘</span>
+                <span class="brand-text">Quokka Squad 25g</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="courses.html">2026 Subjects</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="profiles.html" class="active">Profiles</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+                <li><a href="daily-checklist.html">Daily Checklist</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>👥 Meet the Squad</h1>
+            <p>Get to know your classmates</p>
+        </div>
+    </header>
+
+    <main style="padding: 3rem 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="color: var(--dark-accent); margin-bottom: 1rem;">Quokka Squad 25g</h2>
+                <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">Share your profile, skills, and goals with the class. Get to know each other and build connections.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 3rem;">
+                <div style="background: white; border-radius: 8px; padding: 1.5rem; text-align: center; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08); border-top: 3px solid var(--primary-color);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">0</div>
+                    <div style="color: var(--text-light); font-size: 0.9rem; text-transform: uppercase;">Quokkas</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 style="text-align: left; margin-bottom: 1rem;">📝 Add Your Profile</h2>
+                <form id="profileForm" style="display: grid; gap: 1.5rem;">
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Your Name</label>
+                        <input type="text" id="name" placeholder="e.g., Alex Thompson" required style="width: 100%; padding: 0.8rem; border: 1px solid #d0d0d0; border-radius: 6px;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Emoji</label>
+                        <input type="text" id="emoji" placeholder="Pick one (e.g., 🚀)" maxlength="2" style="width: 100%; padding: 0.8rem; border: 1px solid #d0d0d0; border-radius: 6px;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Background</label>
+                        <input type="text" id="background" placeholder="e.g., No coding experience" style="width: 100%; padding: 0.8rem; border: 1px solid #d0d0d0; border-radius: 6px;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">About You</label>
+                        <textarea id="about" placeholder="Tell us about yourself and your goals" required style="width: 100%; padding: 0.8rem; border: 1px solid #d0d0d0; border-radius: 6px; min-height: 80px; font-family: inherit;"></textarea>
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 600; margin-bottom: 0.5rem;">Skills</label>
+                        <input type="text" id="skills" placeholder="e.g., HTML, CSS, JavaScript" style="width: 100%; padding: 0.8rem; border: 1px solid #d0d0d0; border-radius: 6px;">
+                    </div>
+                    <button type="submit" class="submit-btn">✨ Add to Squad</button>
+                </form>
+            </div>
+
+            <div id="profilesGrid" class="profiles-grid" style="margin-top: 3rem;">
+                <div style="text-align: center; padding: 3rem; background: linear-gradient(135deg, rgba(255, 140, 66, 0.05), rgba(78, 205, 196, 0.05)); border-radius: 12px; grid-column: 1 / -1;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🦘</div>
+                    <h3 style="color: var(--dark-accent);">No profiles yet!</h3>
+                    <p style="color: var(--text-light);">Be the first to add your profile.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <p>© 2025 Quokka Squad 25g • Diploma of IT Back End Web Development</p>
+            <p>Equinim College • Intake 25g</p>
+        </div>
+    </footer>
+
+    <script>
+        function loadProfiles(){const e=document.getElementById("profilesGrid"),t=JSON.parse(localStorage.getItem("squadProfiles"))||[];0===t.length?e.innerHTML='<div style="text-align: center; padding: 3rem; background: linear-gradient(135deg, rgba(255, 140, 66, 0.05), rgba(78, 205, 196, 0.05)); border-radius: 12px; grid-column: 1 / -1;"><div style="font-size: 3rem; margin-bottom: 1rem;">🦘</div><h3 style="color: var(--dark-accent);">No profiles yet!</h3><p style="color: var(--text-light);">Be the first to add your profile.</p></div>':(e.innerHTML=t.map(e=>`<div class="profile-card"><div class="profile-avatar">${e.emoji||"🌟"}</div><div class="profile-content"><h3>${e.name}</h3><div class="profile-role">${e.year||"Intake 25g"}</div>${e.background?`<p style="color: var(--text-light); margin: 0.8rem 0;"><strong>Background:</strong> ${e.background}</p>`:"<p>"+e.about+"</p>"}<p style="color: var(--text-light); margin-bottom: 0;">${e.about}</p>${e.skills?`<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;"><p style="font-size: 0.85rem; margin-bottom: 0.5rem;">Skills</p><div>${e.skills.split(",").map(e=>`<span class="skill-tag">${e.trim()}</span>`).join("")}</div></div>`:""}</div></div>`).join("")),document.querySelector(".stat-number").textContent=t.length}document.getElementById("profileForm").addEventListener("submit",function(e){e.preventDefault();const t={name:document.getElementById("name").value,emoji:document.getElementById("emoji").value,background:document.getElementById("background").value,about:document.getElementById("about").value,skills:document.getElementById("skills").value};let i=JSON.parse(localStorage.getItem("squadProfiles"))||[];i.push(t),localStorage.setItem("squadProfiles",JSON.stringify(i)),document.getElementById("profileForm").reset(),loadProfiles(),window.scrollTo({top:0,behavior:"smooth"}),alert("✨ Profile added!")}),document.addEventListener("DOMContentLoaded",loadProfiles);
+    </script>
+</body>
+</html>
