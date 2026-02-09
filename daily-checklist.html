@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +8,29 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        .schedule-timeline { margin: 2rem 0; }
-        .time-block { 
-            background: var(--white); 
-            padding: 1.5rem; 
+        .schedule-timeline {
+            margin: 2rem 0;
+        }
+
+        .time-block {
+            background: var(--white);
+            padding: 1.5rem;
             margin-bottom: 1rem;
             border-radius: 10px;
             border-left: 5px solid var(--primary-color);
             box-shadow: 0 2px 10px var(--shadow);
         }
+
         .time-block h3 {
             color: var(--primary-color);
             font-size: 1.3rem;
             margin: 0 0 0.5rem 0;
         }
+
         .time-label {
             display: inline-block;
             background: var(--primary-color);
@@ -33,6 +41,7 @@
             font-weight: 700;
             margin-bottom: 0.8rem;
         }
+
         .checklist-item {
             display: flex;
             align-items: flex-start;
@@ -43,10 +52,12 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
+
         .checklist-item:hover {
             background: #fffef0;
             transform: translateX(5px);
         }
+
         .checklist-item input[type="checkbox"] {
             margin-right: 1rem;
             margin-top: 0.2rem;
@@ -55,25 +66,31 @@
             cursor: pointer;
             accent-color: var(--primary-color);
         }
+
         .checklist-item label {
             cursor: pointer;
             flex: 1;
             user-select: none;
         }
-        .checklist-item input[type="checkbox"]:checked + label {
+
+        .checklist-item input[type="checkbox"]:checked+label {
             color: var(--text-light);
             text-decoration: line-through;
         }
+
         .break-indicator {
             border-left-color: var(--secondary-color);
             background: linear-gradient(135deg, rgba(78, 205, 196, 0.05), rgba(255, 209, 102, 0.05));
         }
+
         .break-indicator .time-label {
             background: var(--secondary-color);
         }
+
         .break-indicator h3 {
             color: var(--secondary-color);
         }
+
         .tip-box {
             background: linear-gradient(135deg, rgba(255, 140, 66, 0.1), rgba(255, 209, 102, 0.1));
             border-left: 4px solid var(--primary-color);
@@ -81,9 +98,13 @@
             border-radius: 8px;
             margin: 2rem 0;
         }
-        .tip-box strong { color: var(--dark-accent); }
+
+        .tip-box strong {
+            color: var(--dark-accent);
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -121,29 +142,39 @@
             <!-- BEFORE CLASS -->
             <div class="card" style="margin-bottom: 2rem;">
                 <h2 style="text-align: left; margin-bottom: 1.5rem;">✅ Before Class (9:00 - 9:30 AM)</h2>
-                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Prepare yourself for a productive learning session:</p>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Prepare yourself for a productive learning
+                    session:</p>
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
-                    <label><strong>🚗 Arrive on time</strong> - Aim for 9:15 AM so you're settled before class starts</label>
-                </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                    <input type="checkbox">
-                    <label><strong>🧠 Mental prep</strong> - Review yesterday's notes or the day's topic if possible</label>
-                </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                    <input type="checkbox">
-                    <label><strong>☕ Get comfortable</strong> - Grab coffee/water, use bathroom, settle in your seat</label>
-                </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                    <input type="checkbox">
-                    <label><strong>💻 Tech ready</strong> - Open VS Code, ensure your laptop is charged or plugged in</label>
+                    <label><strong>🚗 Arrive on time</strong> - Aim for 9:15 AM so you're settled before class
+                        starts</label>
                 </div>
 
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <input type="checkbox">
+                    <label><strong>🧠 Mental prep</strong> - Review yesterday's notes or the day's topic if
+                        possible</label>
+                </div>
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <input type="checkbox">
+                    <label><strong>☕ Get comfortable</strong> - Grab coffee/water, use bathroom, settle in your
+                        seat</label>
+                </div>
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <input type="checkbox">
+                    <label><strong>💻 Tech ready</strong> - Open VS Code, ensure your laptop is charged or plugged
+                        in</label>
+                </div>
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
                     <label><strong>📱 Phone on silent</strong> - Minimize distractions during learning time</label>
                 </div>
@@ -153,179 +184,167 @@
             <div class="card" style="margin-bottom: 2rem;">
                 <h2 style="text-align: left; margin-bottom: 1.5rem;">⏰ Class Schedule & Checklist</h2>
 
-                <!-- 9:30 - 10:15 Block 1 -->
+                <!-- 9:30 - 10:10 Block 1 -->
                 <div class="time-block">
-                    <span class="time-label">📝 9:30 AM - 10:15 AM</span>
-                    <h3>Block 1: Typing Test & Learning (45 mins)</h3>
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Start the day with typing practice, then dive into content:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">📝 9:30 AM - 10:10 AM</span>
+                    <h3>Block 1: Typing & Foundations (40 mins)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Start strong with typing practice and core
+                        concepts:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>⌨️ Typing Test</strong> - Complete your daily typing assessment on MonkeyType</label>
+                        <label><strong>⌨️ Typing Test</strong> - Complete your daily typing assessment on
+                            MonkeyType</label>
                     </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>📚 Mark attendance</strong> - Scan the QR code when Tim displays it</label>
+                        <label><strong>📚 Attendance</strong> - Scan the QR code as soon as it's up</label>
                     </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>🎯 Engage in lesson</strong> - Ask questions, take notes, participate actively</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>✏️ Code along</strong> - Type out code examples with Tim, don't just copy-paste</label>
+                        <label><strong>🎯 Lesson Focus</strong> - Engage with the foundational topic of the day</label>
                     </div>
                 </div>
 
-                <!-- 10:15 - 10:30 Break 1 -->
+                <!-- 10:10 - 10:20 Break 1 -->
                 <div class="time-block break-indicator">
-                    <span class="time-label">☕ 10:15 AM - 10:30 AM</span>
-                    <h3>Break 1 (15 mins)</h3>
-                    <p style="color: var(--text-light);">Step away from your screen, stretch, grab a drink:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">☕ 10:10 AM - 10:20 AM</span>
+                    <h3>Break 1 (10 mins)</h3>
+                    <p style="color: var(--text-light);">Quick stretch and reset:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>🚶 Move around</strong> - Get up, walk, let your eyes rest</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>🧠 Mental reset</strong> - Chat with classmates or grab refreshment</label>
+                        <label><strong>🚶 Move</strong> - Stand up and walk around</label>
                     </div>
                 </div>
 
-                <!-- 10:30 - 11:15 Block 2 -->
+                <!-- 10:20 - 11:00 Block 2 -->
                 <div class="time-block">
-                    <span class="time-label">💻 10:30 AM - 11:15 AM</span>
-                    <h3>Block 2: Practical Coding (45 mins)</h3>
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Apply concepts and work on exercises:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">💻 10:20 AM - 11:00 AM</span>
+                    <h3>Block 2: Core Learning (40 mins)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Deep dive into today's main topic:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>🔧 Follow along</strong> - Work on the exercises Tim provides</label>
+                        <label><strong>✏️ Code Along</strong> - actively type out examples</label>
                     </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>🤔 Ask questions</strong> - Don't sit stuck; raise your hand or ask in chat</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>📖 Debug together</strong> - Work through errors with classmates or Tim</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>💾 Save your work</strong> - Commit to GitHub if working on projects</label>
+                        <label><strong>🤔 Ask Questions</strong> - Don't let confusion linger</label>
                     </div>
                 </div>
 
-                <!-- 11:15 - 11:30 Break 2 -->
+                <!-- 11:00 - 11:10 Break 2 -->
                 <div class="time-block break-indicator">
-                    <span class="time-label">☕ 11:15 AM - 11:30 AM</span>
-                    <h3>Break 2 (15 mins)</h3>
-                    <p style="color: var(--text-light);">Another quick break before lunch:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">☕ 11:00 AM - 11:10 AM</span>
+                    <h3>Break 2 (10 mins)</h3>
+                    <p style="color: var(--text-light);">Refresh before the pre-lunch sprint:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>⚡ Recharge</strong> - Bathroom, water, snack, stretch</label>
+                        <label><strong>� Hydrate</strong> - Drink some water</label>
                     </div>
                 </div>
 
-                <!-- 11:30 - 12:30 Lunch -->
-                <div class="time-block break-indicator" style="border-left-color: var(--earth-tone); background: linear-gradient(135deg, rgba(149, 180, 106, 0.05), rgba(255, 209, 102, 0.05));">
-                    <span class="time-label" style="background: var(--earth-tone);">🍽️ 11:30 AM - 12:30 PM</span>
-                    <h3 style="color: var(--earth-tone);">Lunch Break (60 mins)</h3>
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Take a proper break, disconnect, recharge:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>🥗 Eat lunch</strong> - Fuel up properly; avoid working during lunch</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>👥 Socialize</strong> - Connect with classmates, build your cohort</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>🧘 Rest</strong> - Step outside, meditate, or just relax</label>
-                    </div>
-                </div>
-
-                <!-- 12:30 - 1:15 Block 3 -->
+                <!-- 11:10 - 11:40 Block 3 -->
                 <div class="time-block">
-                    <span class="time-label">🚀 12:30 PM - 1:15 PM</span>
-                    <h3>Block 3: Projects & Problem Solving (45 mins)</h3>
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Apply your learning to real projects:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">🚀 11:10 AM - 11:40 AM</span>
+                    <h3>Block 3: Practical Application (30 mins)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Apply what you've learned before lunch:
+                    </p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>🎯 Focus on goals</strong> - Work on project milestones or challenges</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>💭 Problem solve</strong> - Think critically; try solutions before asking</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>🤝 Collaborate</strong> - Pair program with a classmate if needed</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>📝 Document</strong> - Leave comments in your code explaining logic</label>
+                        <label><strong>🔧 Exercises</strong> - Start working through the practical tasks</label>
                     </div>
                 </div>
 
-                <!-- 1:15 - 1:30 Break 3 -->
+                <!-- 11:40 - 12:20 Lunch -->
+                <div class="time-block break-indicator"
+                    style="border-left-color: var(--earth-tone); background: linear-gradient(135deg, rgba(149, 180, 106, 0.05), rgba(255, 209, 102, 0.05));">
+                    <span class="time-label" style="background: var(--earth-tone);">🍽️ 11:40 AM - 12:20 PM</span>
+                    <h3 style="color: var(--earth-tone);">Lunch Break (40 mins)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Disconnect and refuel:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                        <input type="checkbox">
+                        <label><strong>🥗 Eat & Rest</strong> - Step away from the screen completely</label>
+                    </div>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                        <input type="checkbox">
+                        <label><strong>👥 Socialize</strong> - Chat with peers about non-code topics</label>
+                    </div>
+                </div>
+
+                <!-- 12:20 - 1:05 Block 4 -->
+                <div class="time-block">
+                    <span class="time-label">� 12:20 PM - 1:05 PM</span>
+                    <h3>Block 4: Project Work (45 mins)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Focused project development time:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                        <input type="checkbox">
+                        <label><strong>🎯 Project Goals</strong> - Make tangible progress on your current
+                            project</label>
+                    </div>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                        <input type="checkbox">
+                        <label><strong>🤝 Collaborate</strong> - Pair program or troubleshoot with others</label>
+                    </div>
+                </div>
+
+                <!-- 1:05 - 1:15 Break 3 -->
                 <div class="time-block break-indicator">
-                    <span class="time-label">☕ 1:15 PM - 1:30 PM</span>
-                    <h3>Break 3 (15 mins)</h3>
-                    <p style="color: var(--text-light);">Final break before the day wraps up:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">☕ 1:05 PM - 1:15 PM</span>
+                    <h3>Break 3 (10 mins)</h3>
+                    <p style="color: var(--text-light);">Final short break:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>💪 Final push prep</strong> - Hydrate, stretch, prepare for wrap-up</label>
+                        <label><strong>💪 Final Push Prep</strong> - Get ready to wrap up the day</label>
                     </div>
                 </div>
 
-                <!-- 1:30 - 2:00 Block 4 -->
+                <!-- 1:15 - 2:00 Block 5 -->
                 <div class="time-block">
-                    <span class="time-label">📌 1:30 PM - 2:00 PM</span>
-                    <h3>Block 4: Wrap-Up & Prep (30 mins)</h3>
-                    <p style="color: var(--text-light); margin-bottom: 1rem;">Consolidate learning and prepare for next session:</p>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                    <span class="time-label">📌 1:15 PM - 2:00 PM</span>
+                    <h3>Block 5: Review & Wrap-Up (45 mins)</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1rem;">Consolidate and close out:</p>
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>🔍 Review today</strong> - Go through what you learned and created</label>
+                        <label><strong>� Review</strong> - Go over what was covered today</label>
                     </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>✅ Test your code</strong> - Make sure projects still work and commit final changes</label>
+                        <label><strong>✅ Commit Code</strong> - Push your work to GitHub</label>
                     </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                    <div class="checklist-item"
+                        onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                         <input type="checkbox">
-                        <label><strong>📖 Listen to next session preview</strong> - Tim will outline what's coming</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>❓ Ask for clarification</strong> - Last chance to ask before you leave</label>
-                    </div>
-                    
-                    <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
-                        <input type="checkbox">
-                        <label><strong>🎒 Pack up</strong> - Close laptop, gather your things, leave space clean</label>
+                        <label><strong>👋 Cleanup</strong> - Prepare your workspace for tomorrow</label>
                     </div>
                 </div>
             </div>
@@ -333,34 +352,46 @@
             <!-- AFTER CLASS -->
             <div class="card" style="margin-bottom: 2rem;">
                 <h2 style="text-align: left; margin-bottom: 1.5rem;">🏠 After Class (2:00 PM Onwards)</h2>
-                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Continue your learning journey outside the classroom:</p>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+                <p style="color: var(--text-light); margin-bottom: 1.5rem;">Continue your learning journey outside the
+                    classroom:</p>
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
-                    <label><strong>📧 Check emails</strong> - Review any assignments or resources Tim sent</label>
+                    <label><strong>📧 Check emails</strong> - Review any assignments or resources Tim / your trainer for
+                        the day sent</label>
                 </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
-                    <label><strong>💻 Continue coding</strong> - If something wasn't finished, work on it at home</label>
+                    <label><strong>💻 Continue coding</strong> - If something wasn't finished, try to work on it at
+                        home</label>
                 </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
                     <label><strong>📚 Review notes</strong> - Reinforce what you learned while it's fresh</label>
                 </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
-                    <label><strong>🔗 Explore resources</strong> - Check W3Schools, MDN, or JavaScript.info for deeper learning</label>
+                    <label><strong>🔗 Explore resources</strong> - Check W3Schools, MDN, or JavaScript.info for deeper
+                        learning</label>
                 </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
-                    <label><strong>❓ Ask on noticeboard</strong> - Post questions for the group or contact Tim if stuck</label>
+                    <label><strong>❓ Ask on noticeboard</strong> - Post questions for the group or contact Tim / your
+                        trainer for the day if
+                        stuck</label>
                 </div>
-                
-                <div class="checklist-item" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+
+                <div class="checklist-item"
+                    onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
                     <input type="checkbox">
                     <label><strong>🧠 Reflect</strong> - What went well? What challenges did you face?</label>
                 </div>
@@ -370,41 +401,65 @@
             <div class="tip-box">
                 <h3 style="color: var(--dark-accent); margin-top: 0;">💡 Pro Tips for Success</h3>
                 <ul style="margin-left: 1.5rem; color: var(--text-dark);">
-                    <li><strong>Arrive on time:</strong> Missing the first 10 minutes means missing typing test practice and attendance</li>
-                    <li><strong>Stay engaged:</strong> Typing test is not just a warm-up; it builds professional speed for real-world work</li>
-                    <li><strong>Use breaks strategically:</strong> Don't skip breaks or work through them; your brain needs rest to absorb information</li>
-                    <li><strong>Lunch is sacred:</strong> Step away from code during lunch. You'll come back refreshed and creative</li>
-                    <li><strong>Ask questions:</strong> If you don't understand something, ask immediately. Don't let confusion build</li>
-                    <li><strong>Collaborate:</strong> Pair programming and peer learning is encouraged. You learn better together</li>
-                    <li><strong>Document your code:</strong> Comments help you remember your logic and help others understand your work</li>
-                    <li><strong>Keep your workspace clean:</strong> Leave the classroom as you'd like to find it for the next class</li>
-                    <li><strong>If you'll be late or absent:</strong> Text Tim at <strong>0414 265 050</strong> before class starts</li>
+                    <li><strong>Arrive on time:</strong> Missing the first 10 minutes means missing typing test practice
+                        and attendance</li>
+                    <li><strong>Stay engaged:</strong> Typing test is not just a warm-up; it builds professional speed
+                        for real-world work</li>
+                    <li><strong>Use breaks strategically:</strong> Don't skip breaks or work through them; your brain
+                        needs rest to absorb information</li>
+                    <li><strong>Lunch is sacred:</strong> Step away from code during lunch. You'll come back refreshed
+                        and creative</li>
+                    <li><strong>Ask questions:</strong> If you don't understand something, ask immediately. Don't let
+                        confusion build</li>
+                    <li><strong>Collaborate:</strong> Pair programming and peer learning is encouraged. You learn better
+                        together</li>
+                    <li><strong>Document your code:</strong> Comments help you remember your logic and help others
+                        understand your work</li>
+                    <li><strong>Keep your workspace clean:</strong> Leave the classroom as you'd like to find it for the
+                        next class</li>
+                    <li><strong>If you'll be late or absent:</strong> Text Tim / your trainer for the day at
+                        <strong>0414 265 050</strong> before
+                        class starts
+                    </li>
+                    <li><strong>Communication:</strong> No posting - questions go to group chat (be constructive)</li>
                 </ul>
             </div>
 
             <!-- ISSUES & SUPPORT -->
             <div class="card" style="margin-top: 2rem;">
                 <h2 style="text-align: left; margin-bottom: 1.5rem;">🆘 If Issues Arise During Class</h2>
-                
+
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                    <div style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+                    <div
+                        style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
                         <h4 style="color: var(--dark-accent); margin-bottom: 0.5rem;">💻 Technical Problem</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">If your code won't run or you're stuck on a bug, raise your hand immediately. Tim or a classmate can help you debug.</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">If your code won't run or you're stuck
+                            on a bug, raise your hand immediately. Tim / your trainer for the day or a classmate can
+                            help you debug.</p>
                     </div>
-                    
-                    <div style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+
+                    <div
+                        style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
                         <h4 style="color: var(--dark-accent); margin-bottom: 0.5rem;">🔧 Computer Crash</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;">Tell Tim immediately. We can pair you with another computer or reschedule your work. Email <strong>team@equinim.com.au</strong> if it needs IT support.</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Tell Tim / your trainer for the day
+                            immediately. We can pair you
+                            with another computer or reschedule your work. Email <strong>team@equinim.com.au</strong> if
+                            it needs IT support.</p>
                     </div>
-                    
-                    <div style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+
+                    <div
+                        style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
                         <h4 style="color: var(--dark-accent); margin-bottom: 0.5rem;">😟 Personal Issue</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;\">If you're feeling unwell or need to step out, let Tim know. We can work out accommodations.</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;\">If you're feeling unwell or need to
+                            step out, let Tim / your trainer for the day know. We can work out accommodations.</p>
                     </div>
-                    
-                    <div style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
+
+                    <div
+                        style="padding: 1.5rem; background: var(--background); border-radius: 8px; border-left: 4px solid var(--primary-color);">
                         <h4 style="color: var(--dark-accent); margin-bottom: 0.5rem;\">🚨 Emergency</h4>
-                        <p style="color: var(--text-light); font-size: 0.9rem;\">If there's a medical or safety emergency, call <strong>000</strong> immediately, then notify Tim.</p>
+                        <p style="color: var(--text-light); font-size: 0.9rem;\">If there's a medical or safety
+                            emergency, call <strong>000</strong> immediately, then notify Tim / your trainer for the
+                            day.</p>
                     </div>
                 </div>
             </div>
@@ -414,7 +469,9 @@
     <footer class="footer">
         <div class="footer-wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                </path>
             </svg>
         </div>
         <div class="footer-content">
@@ -440,4 +497,5 @@
         });
     </script>
 </body>
+
 </html>

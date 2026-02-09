@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,25 @@
     <link rel="stylesheet" href="main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <style>
-        .lesson-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
-        
-        .lesson-nav { 
-            display: flex; 
-            gap: 1rem; 
-            margin-bottom: 2rem; 
+        .lesson-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .lesson-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
             flex-wrap: wrap;
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 1rem;
         }
-        
+
         .lesson-tab {
             padding: 0.8rem 1.5rem;
             background: var(--background);
@@ -32,35 +39,42 @@
             text-decoration: none;
             display: inline-block;
         }
-        
+
         .lesson-tab:hover {
             background: var(--primary-color);
             color: var(--white);
             border-color: var(--primary-color);
             transform: translateY(-2px);
         }
-        
+
         .lesson-tab.active {
             background: var(--primary-color);
             color: var(--white);
             border-color: var(--primary-color);
             box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
         }
-        
+
         .lesson-content {
             display: none;
             animation: fadeIn 0.3s ease;
         }
-        
+
         .lesson-content.active {
             display: block;
         }
-        
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        
+
         .lesson-header {
             background: linear-gradient(135deg, var(--secondary-color), var(--dark-accent));
             color: var(--white);
@@ -68,11 +82,22 @@
             border-radius: 15px;
             margin-bottom: 2rem;
         }
-        
-        .lesson-header h2 { margin: 0; font-size: 2rem; }
-        .lesson-header p { margin: 0.5rem 0 0 0; opacity: 0.9; }
-        .lesson-date { color: var(--accent-color); font-weight: 600; }
-        
+
+        .lesson-header h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .lesson-header p {
+            margin: 0.5rem 0 0 0;
+            opacity: 0.9;
+        }
+
+        .lesson-date {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
         .lesson-section {
             background: var(--white);
             padding: 2rem;
@@ -80,7 +105,7 @@
             margin-bottom: 2rem;
             box-shadow: 0 4px 20px var(--shadow);
         }
-        
+
         .lesson-section h3 {
             color: var(--primary-color);
             font-size: 1.5rem;
@@ -88,24 +113,25 @@
             border-bottom: 3px solid var(--accent-color);
             padding-bottom: 0.8rem;
         }
-        
+
         .lesson-section h4 {
             color: var(--dark-accent);
             font-size: 1.2rem;
             margin-top: 1.5rem;
             margin-bottom: 0.8rem;
         }
-        
-        .lesson-section ul, .lesson-section ol {
+
+        .lesson-section ul,
+        .lesson-section ol {
             margin: 1rem 0 1rem 2rem;
             line-height: 1.8;
         }
-        
+
         .lesson-section li {
             margin-bottom: 0.8rem;
             color: var(--text-dark);
         }
-        
+
         .code-block {
             background: #2d3748;
             color: #e2e8f0;
@@ -118,14 +144,14 @@
             line-height: 1.5;
             border-left: 4px solid var(--primary-color);
         }
-        
+
         .highlight {
             background: #fff3cd;
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
             font-weight: 600;
         }
-        
+
         .info-box {
             background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 209, 102, 0.1));
             border-left: 4px solid var(--secondary-color);
@@ -133,9 +159,11 @@
             border-radius: 8px;
             margin: 1.5rem 0;
         }
-        
-        .info-box strong { color: var(--dark-accent); }
-        
+
+        .info-box strong {
+            color: var(--dark-accent);
+        }
+
         .question-block {
             background: #f0f4ff;
             border-left: 4px solid var(--dark-accent);
@@ -143,12 +171,12 @@
             border-radius: 8px;
             margin: 1.5rem 0;
         }
-        
+
         .question-block h5 {
             color: var(--dark-accent);
             margin-top: 0;
         }
-        
+
         .step-indicator {
             display: inline-block;
             background: var(--primary-color);
@@ -159,7 +187,7 @@
             font-weight: 700;
             margin-right: 0.5rem;
         }
-        
+
         .status-badge {
             display: inline-block;
             padding: 0.4rem 1rem;
@@ -168,23 +196,24 @@
             font-weight: 600;
             margin-top: 1rem;
         }
-        
+
         .status-in-progress {
             background: #fff3cd;
             color: #856404;
         }
-        
+
         .status-upcoming {
             background: #d1ecf1;
             color: #0c5460;
         }
-        
+
         .status-completed {
             background: #d4edda;
             color: #155724;
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -216,7 +245,8 @@
         <div class="lesson-container">
             <!-- Lesson Navigation -->
             <div class="lesson-nav">
-                <button class="lesson-tab active" onclick="switchLesson('lesson-yesterday')">📖 Yesterday's Lesson</button>
+                <button class="lesson-tab active" onclick="switchLesson('lesson-yesterday')">📖 Yesterday's
+                    Lesson</button>
                 <button class="lesson-tab active" onclick="switchLesson('lesson-today')">🔄 Today's Lesson</button>
                 <button class="lesson-tab" onclick="switchLesson('lesson-friday')">⏱️ Friday's Lesson</button>
             </div>
@@ -230,7 +260,9 @@
 
                 <div class="lesson-section">
                     <h3>🎯 Lesson Overview</h3>
-                    <p>In this foundational lesson, we explored the preparation and planning phase of the ICT50220 Diploma curriculum. This step introduces you to the structure of the course and sets expectations for your learning journey through Back End Development.</p>
+                    <p>In this foundational lesson, we explored the preparation and planning phase of the ICT50220
+                        Diploma curriculum. This step introduces you to the structure of the course and sets
+                        expectations for your learning journey through Back End Development.</p>
                     <span class="status-badge status-completed">✓ Completed</span>
                 </div>
 
@@ -240,7 +272,8 @@
                     <ul>
                         <li><strong>Diploma Level:</strong> ICT50220 Diploma of Information Technology (JavaScript)</li>
                         <li><strong>Specialization:</strong> Back End Development</li>
-                        <li><strong>Learning Outcomes:</strong> Build full-stack web applications with Node.js and Express</li>
+                        <li><strong>Learning Outcomes:</strong> Build full-stack web applications with Node.js and
+                            Express</li>
                         <li><strong>Duration:</strong> 6 months intensive training</li>
                     </ul>
 
@@ -266,27 +299,32 @@
                     <h3>🛠️ Development Environment Setup</h3>
                     <p>Before starting any coding, ensure you have the following installed:</p>
                     <ul>
-                        <li><strong>Node.js:</strong> v18.0 or higher (<a href="https://nodejs.org/" target="_blank">nodejs.org</a>)</li>
+                        <li><strong>Node.js:</strong> v18.0 or higher (<a href="https://nodejs.org/"
+                                target="_blank">nodejs.org</a>)</li>
                         <li><strong>npm:</strong> Comes with Node.js (Package Manager)</li>
-                        <li><strong>Code Editor:</strong> VS Code recommended (<a href="https://code.visualstudio.com/" target="_blank">code.visualstudio.com</a>)</li>
-                        <li><strong>Git:</strong> Version control (<a href="https://git-scm.com/" target="_blank">git-scm.com</a>)</li>
-                        <li><strong>Postman:</strong> API testing tool (<a href="https://www.postman.com/" target="_blank">postman.com</a>)</li>
+                        <li><strong>Code Editor:</strong> VS Code recommended (<a href="https://code.visualstudio.com/"
+                                target="_blank">code.visualstudio.com</a>)</li>
+                        <li><strong>Git:</strong> Version control (<a href="https://git-scm.com/"
+                                target="_blank">git-scm.com</a>)</li>
+                        <li><strong>Postman:</strong> API testing tool (<a href="https://www.postman.com/"
+                                target="_blank">postman.com</a>)</li>
                     </ul>
 
                     <h4>Quick Setup Check</h4>
                     <p>Run these commands in your terminal to verify your setup:</p>
                     <div class="code-block">
-node --version
-npm --version
-git --version
+                        node --version
+                        npm --version
+                        git --version
                     </div>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">You should see version numbers for each command.</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">You should see version numbers for each
+                        command.</p>
                 </div>
 
                 <div class="lesson-section">
                     <h3>📋 Planning Your First Project</h3>
                     <p>We introduced the concept of planning before coding. Here's the planning framework we'll use:</p>
-                    
+
                     <h4>1. Project Definition</h4>
                     <ul>
                         <li>What problem does it solve?</li>
@@ -303,15 +341,15 @@ git --version
 
                     <h4>3. Project Structure</h4>
                     <div class="code-block">
-project-folder/
-├── src/
-│   ├── routes/
-│   ├── controllers/
-│   ├── models/
-│   └── app.js
-├── public/
-├── package.json
-└── .gitignore
+                        project-folder/
+                        ├── src/
+                        │ ├── routes/
+                        │ ├── controllers/
+                        │ ├── models/
+                        │ └── app.js
+                        ├── public/
+                        ├── package.json
+                        └── .gitignore
                     </div>
 
                     <h4>4. Timeline & Milestones</h4>
@@ -323,7 +361,9 @@ project-folder/
                 </div>
 
                 <div class="info-box">
-                    <strong>💡 Key Takeaway:</strong> Good planning before coding saves hours of debugging and restructuring later. Always spend time understanding requirements and architecture before writing code.
+                    <strong>💡 Key Takeaway:</strong> Good planning before coding saves hours of debugging and
+                    restructuring later. Always spend time understanding requirements and architecture before writing
+                    code.
                 </div>
             </div>
 
@@ -336,7 +376,9 @@ project-folder/
 
                 <div class="lesson-section">
                     <h3>📝 Lesson Overview</h3>
-                    <p>Today we began <strong>Step 2: Course Content Questions</strong>. This phase focuses on assessing and reinforcing your understanding of foundational back-end development concepts through structured questions and critical thinking exercises.</p>
+                    <p>Today we began <strong>Step 2: Course Content Questions</strong>. This phase focuses on assessing
+                        and reinforcing your understanding of foundational back-end development concepts through
+                        structured questions and critical thinking exercises.</p>
                     <span class="status-badge status-in-progress">🔄 In Progress</span>
                 </div>
 
@@ -353,28 +395,34 @@ project-folder/
 
                 <div class="lesson-section">
                     <h3>📚 Course Content Questions - Subject 3</h3>
-                    <p><strong>Subject:</strong> Back End Development | <strong>Module:</strong> Activities | <strong>Phase:</strong> Step 2 - Preparation & Planning Questions</p>
+                    <p><strong>Subject:</strong> Back End Development | <strong>Module:</strong> Activities |
+                        <strong>Phase:</strong> Step 2 - Preparation & Planning Questions
+                    </p>
 
                     <h4>Question Set 1: JavaScript Fundamentals</h4>
-                    
+
                     <div class="question-block">
                         <h5>Q1.1: What is JavaScript?</h5>
-                        <p><em>Describe JavaScript, its role in web development, and how it differs from other programming languages.</em></p>
+                        <p><em>Describe JavaScript, its role in web development, and how it differs from other
+                                programming languages.</em></p>
                     </div>
 
                     <div class="question-block">
                         <h5>Q1.2: Data Types in JavaScript</h5>
-                        <p><em>List and explain the primitive data types in JavaScript. Provide examples for each type.</em></p>
+                        <p><em>List and explain the primitive data types in JavaScript. Provide examples for each
+                                type.</em></p>
                     </div>
 
                     <div class="question-block">
                         <h5>Q1.3: Variables and Scoping</h5>
-                        <p><em>Explain the differences between `var`, `let`, and `const`. When should you use each?</em></p>
+                        <p><em>Explain the differences between `var`, `let`, and `const`. When should you use each?</em>
+                        </p>
                     </div>
 
                     <div class="question-block">
                         <h5>Q1.4: Functions and Callbacks</h5>
-                        <p><em>What is a callback function? Why are callbacks important in JavaScript? Provide a code example.</em></p>
+                        <p><em>What is a callback function? Why are callbacks important in JavaScript? Provide a code
+                                example.</em></p>
                     </div>
 
                     <h4>Question Set 2: Node.js & Backend Concepts</h4>
@@ -386,7 +434,8 @@ project-folder/
 
                     <div class="question-block">
                         <h5>Q2.2: npm and Package Management</h5>
-                        <p><em>What does npm stand for? How do you install and use packages in a Node.js project?</em></p>
+                        <p><em>What does npm stand for? How do you install and use packages in a Node.js project?</em>
+                        </p>
                     </div>
 
                     <div class="question-block">
@@ -396,35 +445,42 @@ project-folder/
 
                     <div class="question-block">
                         <h5>Q2.4: REST API Principles</h5>
-                        <p><em>Explain the RESTful architecture. What are HTTP methods (GET, POST, PUT, DELETE) used for?</em></p>
+                        <p><em>Explain the RESTful architecture. What are HTTP methods (GET, POST, PUT, DELETE) used
+                                for?</em></p>
                     </div>
 
                     <h4>Question Set 3: Planning & Architecture</h4>
 
                     <div class="question-block">
                         <h5>Q3.1: MVC Architecture</h5>
-                        <p><em>What does MVC stand for? Explain each component and how they interact in a web application.</em></p>
+                        <p><em>What does MVC stand for? Explain each component and how they interact in a web
+                                application.</em></p>
                     </div>
 
                     <div class="question-block">
                         <h5>Q3.2: Project Requirements Analysis</h5>
-                        <p><em>When building an application, what are the key questions you should ask before starting to code?</em></p>
+                        <p><em>When building an application, what are the key questions you should ask before starting
+                                to code?</em></p>
                     </div>
 
                     <div class="question-block">
                         <h5>Q3.3: Technical Stack Selection</h5>
-                        <p><em>How do you choose between different technologies? What factors influence your decision?</em></p>
+                        <p><em>How do you choose between different technologies? What factors influence your
+                                decision?</em></p>
                     </div>
                 </div>
 
                 <div class="lesson-section">
                     <h3>📖 Discussion & Answers (Group Work)</h3>
-                    <p>During today's class, we worked through these questions collaboratively. Key insights from the discussion:</p>
-                    
+                    <p>During today's class, we worked through these questions collaboratively. Key insights from the
+                        discussion:</p>
+
                     <h4>Key Concepts Reinforced</h4>
                     <ul>
-                        <li><strong>Asynchronous JavaScript:</strong> Callbacks, Promises, and async/await are core to Node.js</li>
-                        <li><strong>Stateless Communication:</strong> HTTP is stateless; sessions/tokens manage user state</li>
+                        <li><strong>Asynchronous JavaScript:</strong> Callbacks, Promises, and async/await are core to
+                            Node.js</li>
+                        <li><strong>Stateless Communication:</strong> HTTP is stateless; sessions/tokens manage user
+                            state</li>
                         <li><strong>Data Flow:</strong> Client → Router → Controller → Model → Database</li>
                         <li><strong>Error Handling:</strong> Proper error handling is critical in server-side code</li>
                     </ul>
@@ -438,8 +494,38 @@ project-folder/
                     </ul>
                 </div>
 
+                <div class="lesson-section">
+                    <h3>🛠️ Resources & Tools</h3>
+                    <p>Use these resources to help with your project planning and development:</p>
+
+                    <h4>Wireframing & Diagramming</h4>
+                    <ul>
+                        <li><a href="https://www.figma.com/figjam/" target="_blank">Figma FigJam</a> - Collaborative
+                            whiteboard</li>
+                        <li><a href="https://excalidraw.com/" target="_blank">Excalidraw</a> - Virtual whiteboard for
+                            sketching</li>
+                        <li><a href="https://app.diagrams.net/" target="_blank">Draw.io</a> - Flowchart maker</li>
+                    </ul>
+
+                    <h4>Project Template</h4>
+                    <ul>
+                        <li><a href="https://to-do-app-eqc.onrender.com/" target="_blank">To-Do App Reference
+                                Implementation</a></li>
+                    </ul>
+
+                    <h4>Class Materials</h4>
+                    <ul>
+                        <li><a href="class%20resources/ToDo%20App%20Wireframe%2025g.pdf" target="_blank">📄 To-Do App
+                                Wireframe (PDF)</a></li>
+                        <li><a href="class%20resources/TERMINAL%20COMMANDS%2025g.pdf" target="_blank">📄 Terminal
+                                Commands Cheat Sheet (PDF)</a></li>
+                    </ul>
+                </div>
+
                 <div class="info-box">
-                    <strong>📌 Homework Assignment:</strong> Review all questions in Sets 1-3 and prepare written answers. Focus especially on Q2.4 (REST API) and Q3.1 (MVC), as these are foundational for our To-Do App project that we'll start after the database lesson.
+                    <strong>📌 Homework Assignment:</strong> Review all questions in Sets 1-3 and prepare written
+                    answers. Focus especially on Q2.4 (REST API) and Q3.1 (MVC), as these are foundational for our To-Do
+                    App project that we'll start after the database lesson.
                 </div>
             </div>
 
@@ -447,28 +533,34 @@ project-folder/
             <div id="lesson-friday" class="lesson-content">
                 <div class="lesson-header">
                     <h2>⏱️ Friday's Lesson: Introduction to JavaScript Databases</h2>
-                    <p><span class="lesson-date">Upcoming (Feb 7, 2026)</span> • Critical Foundational Content</p>
+                    <p><span class="lesson-date">Upcoming (Feb 13, 2026)</span> • Critical Foundational Content</p>
                 </div>
 
                 <div class="lesson-section">
                     <h3>🎯 Lesson Overview</h3>
-                    <p>This is a <strong>critical lesson</strong> that will unblock our To-Do App project. During today's planning session, we discovered that database concepts are essential before continuing with the application design. This lesson will provide the foundation needed to resume our To-Do App development.</p>
+                    <p>This is a <strong>critical lesson</strong> that will unblock our To-Do App project. During
+                        today's planning session, we discovered that database concepts are essential before continuing
+                        with the application design. This lesson will provide the foundation needed to resume our To-Do
+                        App development.</p>
                     <span class="status-badge status-upcoming">⏱️ Upcoming Friday</span>
                 </div>
 
                 <div class="lesson-section">
                     <h3>📚 What We'll Cover</h3>
-                    
+
                     <h4>1. Database Fundamentals</h4>
                     <ul>
                         <li><strong>What is a Database?</strong> Persistent data storage and retrieval</li>
                         <li><strong>Types of Databases:</strong>
                             <ul style="margin-top: 0.5rem;">
-                                <li><span class="highlight">SQL (Relational):</span> MySQL, PostgreSQL, SQLite - Structured, table-based</li>
-                                <li><span class="highlight">NoSQL (Non-Relational):</span> MongoDB, Firebase - Flexible, document-based</li>
+                                <li><span class="highlight">SQL (Relational):</span> MySQL, PostgreSQL, SQLite -
+                                    Structured, table-based</li>
+                                <li><span class="highlight">NoSQL (Non-Relational):</span> MongoDB, Firebase - Flexible,
+                                    document-based</li>
                             </ul>
                         </li>
-                        <li><strong>CRUD Operations:</strong> Create, Read, Update, Delete - the four basic operations</li>
+                        <li><strong>CRUD Operations:</strong> Create, Read, Update, Delete - the four basic operations
+                        </li>
                     </ul>
 
                     <h4>2. Relational Databases (SQL)</h4>
@@ -479,17 +571,17 @@ project-folder/
                         <li>Data Types and Constraints</li>
                         <li>Introduction to SQL queries:
                             <div class="code-block">
--- Basic SELECT query
-SELECT * FROM users WHERE status = 'active';
+                                -- Basic SELECT query
+                                SELECT * FROM users WHERE status = 'active';
 
--- INSERT query
-INSERT INTO users (name, email) VALUES ('John', 'john@example.com');
+                                -- INSERT query
+                                INSERT INTO users (name, email) VALUES ('John', 'john@example.com');
 
--- UPDATE query
-UPDATE todos SET completed = true WHERE id = 5;
+                                -- UPDATE query
+                                UPDATE todos SET completed = true WHERE id = 5;
 
--- DELETE query
-DELETE FROM todos WHERE id = 5;
+                                -- DELETE query
+                                DELETE FROM todos WHERE id = 5;
                             </div>
                         </li>
                     </ul>
@@ -501,32 +593,35 @@ DELETE FROM todos WHERE id = 5;
                         <li>Schema Flexibility</li>
                         <li>Querying with JavaScript objects:
                             <div class="code-block">
-// MongoDB query example
-db.todos.find({ userId: 5 });
+                                // MongoDB query example
+                                db.todos.find({ userId: 5 });
 
-// Insert
-db.todos.insertOne({ title: 'Learn DB', completed: false });
+                                // Insert
+                                db.todos.insertOne({ title: 'Learn DB', completed: false });
 
-// Update
-db.todos.updateOne({ _id: 123 }, { $set: { completed: true } });
+                                // Update
+                                db.todos.updateOne({ _id: 123 }, { $set: { completed: true } });
 
-// Delete
-db.todos.deleteOne({ _id: 123 });
+                                // Delete
+                                db.todos.deleteOne({ _id: 123 });
                             </div>
                         </li>
                     </ul>
 
                     <h4>4. Choosing a Database for Your Project</h4>
                     <ul>
-                        <li><strong>SQL When:</strong> Complex relationships, structured data, strong consistency needed</li>
-                        <li><strong>NoSQL When:</strong> Flexible schema, rapid development, scalability is priority</li>
-                        <li><strong>For Our To-Do App:</strong> We'll use MongoDB for simplicity and speed of development</li>
+                        <li><strong>SQL When:</strong> Complex relationships, structured data, strong consistency needed
+                        </li>
+                        <li><strong>NoSQL When:</strong> Flexible schema, rapid development, scalability is priority
+                        </li>
+                        <li><strong>For Our To-Do App:</strong> We'll use MongoDB for simplicity and speed of
+                            development</li>
                     </ul>
                 </div>
 
                 <div class="lesson-section">
                     <h3>🔗 Connecting Databases to Node.js</h3>
-                    
+
                     <h4>Database Drivers & ORMs</h4>
                     <p>To connect from Node.js to a database, we use drivers or ORMs:</p>
                     <ul>
@@ -536,23 +631,23 @@ db.todos.deleteOne({ _id: 123 });
 
                     <h4>Simple Node.js to Database Flow</h4>
                     <div class="code-block">
-// 1. Import Mongoose
-const mongoose = require('mongoose');
+                        // 1. Import Mongoose
+                        const mongoose = require('mongoose');
 
-// 2. Connect to MongoDB
-mongoose.connect('mongodb://localhost/mydb');
+                        // 2. Connect to MongoDB
+                        mongoose.connect('mongodb://localhost/mydb');
 
-// 3. Define a schema and model
-const todoSchema = new mongoose.Schema({
-  title: String,
-  completed: Boolean,
-  createdAt: Date
-});
+                        // 3. Define a schema and model
+                        const todoSchema = new mongoose.Schema({
+                        title: String,
+                        completed: Boolean,
+                        createdAt: Date
+                        });
 
-const Todo = mongoose.model('Todo', todoSchema);
+                        const Todo = mongoose.model('Todo', todoSchema);
 
-// 4. Use the model
-Todo.create({ title: 'Learn Databases', completed: false });
+                        // 4. Use the model
+                        Todo.create({ title: 'Learn Databases', completed: false });
                     </div>
                 </div>
 
@@ -564,7 +659,7 @@ Todo.create({ title: 'Learn Databases', completed: false });
                         <li><strong>2NF (Second Normal Form):</strong> Remove partial dependencies</li>
                         <li><strong>3NF (Third Normal Form):</strong> Remove transitive dependencies</li>
                     </ul>
-                    
+
                     <div class="info-box">
                         <strong>Example:</strong> For our To-Do App:
                         <div style="margin-top: 0.8rem;">
@@ -587,31 +682,35 @@ Todo.create({ title: 'Learn Databases', completed: false });
                         <li><strong>Scalability:</strong> As users increase, database efficiency matters</li>
                         <li><strong>Security:</strong> Proper database design protects user data</li>
                     </ol>
-                    
+
                     <h4>Our To-Do App Database Schema</h4>
                     <div class="code-block">
-// MongoDB Collection: todos
-{
-  _id: ObjectId,
-  userId: ObjectId,        // Link to user
-  title: String,           // Todo title
-  description: String,     // Optional details
-  completed: Boolean,      // Status
-  priority: String,        // high/medium/low
-  dueDate: Date,          // When it's due
-  createdAt: Date,        // Timestamp
-  updatedAt: Date         // Last modified
-}
+                        // MongoDB Collection: todos
+                        {
+                        _id: ObjectId,
+                        userId: ObjectId, // Link to user
+                        title: String, // Todo title
+                        description: String, // Optional details
+                        completed: Boolean, // Status
+                        priority: String, // high/medium/low
+                        dueDate: Date, // When it's due
+                        createdAt: Date, // Timestamp
+                        updatedAt: Date // Last modified
+                        }
                     </div>
                 </div>
 
                 <div class="lesson-section">
                     <h3>📖 Recommended Study Materials</h3>
                     <ul>
-                        <li><a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a> - SQL basics</li>
-                        <li><a href="https://docs.mongodb.com/" target="_blank">MongoDB Official Docs</a> - NoSQL fundamentals</li>
-                        <li><a href="https://mongoosejs.com/" target="_blank">Mongoose.js</a> - MongoDB + Node.js integration</li>
-                        <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a> - Async operations (Promises, async/await)</li>
+                        <li><a href="https://www.w3schools.com/sql/" target="_blank">W3Schools SQL Tutorial</a> - SQL
+                            basics</li>
+                        <li><a href="https://docs.mongodb.com/" target="_blank">MongoDB Official Docs</a> - NoSQL
+                            fundamentals</li>
+                        <li><a href="https://mongoosejs.com/" target="_blank">Mongoose.js</a> - MongoDB + Node.js
+                            integration</li>
+                        <li><a href="https://javascript.info/" target="_blank">JavaScript.info</a> - Async operations
+                            (Promises, async/await)</li>
                     </ul>
                 </div>
 
@@ -623,7 +722,8 @@ Todo.create({ title: 'Learn Databases', completed: false });
                         <li>How to connect Node.js applications to databases</li>
                         <li>How to design the schema for a real application</li>
                     </ul>
-                    <p style="margin-top: 0.8rem;"><strong>Next Step:</strong> Resume To-Do App development with database integration ✨</p>
+                    <p style="margin-top: 0.8rem;"><strong>Next Step:</strong> Resume To-Do App development with
+                        database integration ✨</p>
                 </div>
             </div>
         </div>
@@ -632,7 +732,9 @@ Todo.create({ title: 'Learn Databases', completed: false });
     <footer class="footer">
         <div class="footer-wave">
             <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
+                </path>
             </svg>
         </div>
         <div class="footer-content">
@@ -646,17 +748,18 @@ Todo.create({ title: 'Learn Databases', completed: false });
             // Hide all lessons
             const lessons = document.querySelectorAll('.lesson-content');
             lessons.forEach(lesson => lesson.classList.remove('active'));
-            
+
             // Remove active from all tabs
             const tabs = document.querySelectorAll('.lesson-tab');
             tabs.forEach(tab => tab.classList.remove('active'));
-            
+
             // Show selected lesson
             document.getElementById(lessonId).classList.add('active');
-            
+
             // Add active to clicked tab
             event.target.classList.add('active');
         }
     </script>
 </body>
+
 </html>
