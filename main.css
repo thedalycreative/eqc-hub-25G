@@ -136,7 +136,7 @@ body {
 
 .btn-secondary:hover { background-color: var(--accent-color); color: var(--text-dark); transform: translateY(-4px); }
 
-.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; }
+.hero-wave { position: absolute; bottom: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); }
 
 .hero-wave svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; fill: var(--background); }
 
@@ -194,9 +194,9 @@ section h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bot
 
 .link-category ul li a:hover { color: var(--primary-color); transform: translateX(5px); }
 
-.contact-section { background: linear-gradient(135deg, var(--earth-tone) 0%, var(--secondary-color) 100%); color: var(--white); }
+.contact-section { background: var(--background); color: var(--text-dark); }
 
-.contact-section h2 { color: var(--white); }
+.contact-section h2 { color: var(--dark-accent); }
 
 .contact-intro { text-align: center; font-size: 1.2rem; margin-bottom: 2rem; }
 
@@ -214,7 +214,7 @@ section h2 { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bot
 
 .footer { background: linear-gradient(135deg, var(--dark-accent) 0%, var(--primary-color) 100%); color: var(--white); position: relative; padding-top: 60px; }
 
-.footer-wave { position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; transform: rotate(180deg); }
+.footer-wave { position: absolute; top: -1px; left: 0; width: 100%; overflow: hidden; line-height: 0; }
 
 .footer-wave svg { position: relative; display: block; width: calc(100% + 1.3px); height: 60px; fill: var(--background); }
 
