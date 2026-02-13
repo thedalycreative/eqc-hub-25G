@@ -1,305 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lessons | Quokka Squad 25g</title>
+		<link rel="stylesheet" href="main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			.lesson-container {
+				max-width: 1100px;
+				margin: 0 auto;
+				padding: 0 2rem;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lessons | Quokka Squad 25g</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-    <style>
-        .lesson-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+			.lesson-nav {
+				display: flex;
+				gap: 1rem;
+				margin-bottom: 2rem;
+				flex-wrap: wrap;
+				border-bottom: 2px solid var(--primary-color);
+				padding-bottom: 1rem;
+			}
 
-        .lesson-nav {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 1rem;
-        }
+			.lesson-tab {
+				padding: 0.8rem 1.5rem;
+				background: var(--background);
+				border: 2px solid var(--text-light);
+				border-radius: 10px;
+				cursor: pointer;
+				font-weight: 600;
+				color: var(--text-dark);
+				transition: all 0.3s ease;
+				text-decoration: none;
+				display: inline-block;
+			}
 
-        .lesson-tab {
-            padding: 0.8rem 1.5rem;
-            background: var(--background);
-            border: 2px solid var(--text-light);
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
+			.lesson-tab:hover {
+				background: var(--primary-color);
+				color: var(--white);
+				border-color: var(--primary-color);
+				transform: translateY(-2px);
+			}
 
-        .lesson-tab:hover {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-        }
+			.lesson-tab.active {
+				background: var(--primary-color);
+				color: var(--white);
+				border-color: var(--primary-color);
+				box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+			}
 
-        .lesson-tab.active {
-            background: var(--primary-color);
-            color: var(--white);
-            border-color: var(--primary-color);
-            box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
-        }
+			.lesson-content {
+				display: none;
+				animation: fadeIn 0.3s ease;
+			}
 
-        .lesson-content {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
+			.lesson-content.active {
+				display: block;
+			}
 
-        .lesson-content.active {
-            display: block;
-        }
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(10px);
+				}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
 
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+			.lesson-header {
+				background: linear-gradient(
+					135deg,
+					var(--secondary-color),
+					var(--dark-accent)
+				);
+				color: var(--white);
+				padding: 2rem;
+				border-radius: 15px;
+				margin-bottom: 2rem;
+			}
 
-        .lesson-header {
-            background: linear-gradient(135deg, var(--secondary-color), var(--dark-accent));
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-        }
+			.lesson-header h2 {
+				margin: 0;
+				font-size: 2rem;
+			}
 
-        .lesson-header h2 {
-            margin: 0;
-            font-size: 2rem;
-        }
+			.lesson-header p {
+				margin: 0.5rem 0 0 0;
+				opacity: 0.9;
+			}
 
-        .lesson-header p {
-            margin: 0.5rem 0 0 0;
-            opacity: 0.9;
-        }
+			.lesson-date {
+				color: var(--accent-color);
+				font-weight: 600;
+			}
 
-        .lesson-date {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
+			.lesson-section {
+				background: var(--white);
+				padding: 2rem;
+				border-radius: 15px;
+				margin-bottom: 2rem;
+				box-shadow: 0 4px 20px var(--shadow);
+			}
 
-        .lesson-section {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 20px var(--shadow);
-        }
+			.lesson-section h3 {
+				color: var(--primary-color);
+				font-size: 1.5rem;
+				margin-bottom: 1rem;
+				border-bottom: 3px solid var(--accent-color);
+				padding-bottom: 0.8rem;
+			}
 
-        .lesson-section h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid var(--accent-color);
-            padding-bottom: 0.8rem;
-        }
+			.lesson-section h4 {
+				color: var(--dark-accent);
+				font-size: 1.2rem;
+				margin-top: 1.5rem;
+				margin-bottom: 0.8rem;
+			}
 
-        .lesson-section h4 {
-            color: var(--dark-accent);
-            font-size: 1.2rem;
-            margin-top: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
+			.lesson-section ul,
+			.lesson-section ol {
+				margin: 1rem 0 1rem 2rem;
+				line-height: 1.8;
+			}
 
-        .lesson-section ul,
-        .lesson-section ol {
-            margin: 1rem 0 1rem 2rem;
-            line-height: 1.8;
-        }
+			.lesson-section li {
+				margin-bottom: 0.8rem;
+				color: var(--text-dark);
+			}
 
-        .lesson-section li {
-            margin-bottom: 0.8rem;
-            color: var(--text-dark);
-        }
+			.code-block {
+				background: #2d3748;
+				color: #e2e8f0;
+				padding: 1.5rem;
+				border-radius: 10px;
+				overflow-x: auto;
+				margin: 1rem 0;
+				font-family: "Courier New", monospace;
+				font-size: 0.95rem;
+				line-height: 1.5;
+				border-left: 4px solid var(--primary-color);
+			}
 
-        .code-block {
-            background: #2d3748;
-            color: #e2e8f0;
-            padding: 1.5rem;
-            border-radius: 10px;
-            overflow-x: auto;
-            margin: 1rem 0;
-            font-family: 'Courier New', monospace;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            border-left: 4px solid var(--primary-color);
-        }
+			.highlight {
+				background: #fff3cd;
+				padding: 0.2rem 0.4rem;
+				border-radius: 4px;
+				font-weight: 600;
+			}
 
-        .highlight {
-            background: #fff3cd;
-            padding: 0.2rem 0.4rem;
-            border-radius: 4px;
-            font-weight: 600;
-        }
+			.info-box {
+				background: linear-gradient(
+					135deg,
+					rgba(78, 205, 196, 0.1),
+					rgba(255, 209, 102, 0.1)
+				);
+				border-left: 4px solid var(--secondary-color);
+				padding: 1.5rem;
+				border-radius: 8px;
+				margin: 1.5rem 0;
+			}
 
-        .info-box {
-            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(255, 209, 102, 0.1));
-            border-left: 4px solid var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
+			.info-box strong {
+				color: var(--dark-accent);
+			}
 
-        .info-box strong {
-            color: var(--dark-accent);
-        }
+			.question-block {
+				background: #f0f4ff;
+				border-left: 4px solid var(--dark-accent);
+				padding: 1.5rem;
+				border-radius: 8px;
+				margin: 1.5rem 0;
+			}
 
-        .question-block {
-            background: #f0f4ff;
-            border-left: 4px solid var(--dark-accent);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
+			.question-block h5 {
+				color: var(--dark-accent);
+				margin-top: 0;
+			}
 
-        .question-block h5 {
-            color: var(--dark-accent);
-            margin-top: 0;
-        }
+			.step-indicator {
+				display: inline-block;
+				background: var(--primary-color);
+				color: var(--white);
+				padding: 0.3rem 0.8rem;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				font-weight: 700;
+				margin-right: 0.5rem;
+			}
 
-        .step-indicator {
-            display: inline-block;
-            background: var(--primary-color);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-right: 0.5rem;
-        }
+			.status-badge {
+				display: inline-block;
+				padding: 0.4rem 1rem;
+				border-radius: 20px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				margin-top: 1rem;
+			}
 
-        .status-badge {
-            display: inline-block;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-top: 1rem;
-        }
+			.status-in-progress {
+				background: #fff3cd;
+				color: #856404;
+			}
 
-        .status-in-progress {
-            background: #fff3cd;
-            color: #856404;
-        }
+			.status-upcoming {
+				background: #d1ecf1;
+				color: #0c5460;
+			}
 
-        .status-upcoming {
-            background: #d1ecf1;
-            color: #0c5460;
-        }
+			.status-completed {
+				background: #d4edda;
+				color: #155724;
+			}
+		</style>
+	</head>
 
-        .status-completed {
-            background: #d4edda;
-            color: #155724;
-        }
-    </style>
-</head>
+	<body>
+		<nav class="navbar">
+			<div class="nav-container">
+				<a href="index.html" class="nav-brand">
+					<span class="quokka-emoji">🦘</span>
+					<span class="brand-text">Quokka Squad 25g</span>
+				</a>
+				<ul class="nav-links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="schedule.html">Schedule</a></li>
+					<li><a href="lessons.html" class="active">Lessons</a></li>
+					<li><a href="resources.html">Resources</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
 
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-brand">
-                <span class="quokka-emoji">🦘</span>
-                <span class="brand-text">Quokka Squad 25g</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="schedule.html">Schedule</a></li>
-                <li><a href="lessons.html" class="active">Lessons</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+		<header class="page-header">
+			<div class="container">
+				<h1>📚 This Week</h1>
+				<p>
+					ICT50220 Diploma of Information Technology (JS) • Back End Development
+				</p>
+			</div>
+		</header>
 
-    <header class="page-header">
-        <div class="container">
-            <h1>📚 This Week</h1>
-            <p>ICT50220 Diploma of Information Technology (JS) • Back End Development</p>
-        </div>
-    </header>
+		<main style="padding: 3rem 0">
+			<div class="lesson-container">
+				<div class="lesson-header">
+					<h2>✅ This Week's Plan</h2>
+					<p>
+						<span class="lesson-date">Week of Feb 9, 2026</span> • Key milestones
+					</p>
+				</div>
 
-    <main style="padding: 3rem 0;">
-        <div class="lesson-container">
-            <div class="lesson-header">
-                <h2>✅ This Week's Plan</h2>
-                <p><span class="lesson-date">Week of Feb 9, 2026</span> • Key milestones</p>
-            </div>
+				<div class="lesson-section">
+					<h3>📅 Monday</h3>
+					<p>Wireframes for the back end.</p>
+					<h4>Resources</h4>
+					<ul>
+						<li>
+							<a href="https://www.figma.com/figjam/" target="_blank">FigJam</a>
+						</li>
+						<li><a href="https://excalidraw.com/" target="_blank">Excalidraw</a></li>
+						<li>
+							<a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a>
+						</li>
+						<li>
+							<a href="https://to-do-app-eqc.onrender.com/" target="_blank"
+								>Template Site for the GSD-app Project</a
+							>
+						</li>
+						<li>
+							<a
+								href="class%20resources/ToDo%20App%20Wireframe%2025g.pdf"
+								target="_blank"
+								>📄 To-Do App Wireframe (PDF)</a
+							>
+						</li>
+						<li>
+							<a href="class%20resources/TERMINAL%20COMMANDS%2025g.pdf" target="_blank"
+								>📄 Terminal Commands Cheat Sheet (PDF)</a
+							>
+						</li>
+					</ul>
+					<span class="status-badge status-completed">✓ Completed</span>
+				</div>
 
-            <div class="lesson-section">
-                <h3>📅 Monday (Today)</h3>
-                <p>Wireframes for the back end.</p>
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="https://www.figma.com/figjam/" target="_blank">FigJam</a></li>
-                    <li><a href="https://excalidraw.com/" target="_blank">Excalidraw</a></li>
-                    <li><a href="https://app.diagrams.net/" target="_blank">app.diagrams.net</a></li>
-                    <li><a href="https://to-do-app-eqc.onrender.com/" target="_blank">Template Site for the GSD-app
-                        Project</a></li>
-                    <li><a href="class%20resources/ToDo%20App%20Wireframe%2025g.pdf" target="_blank">📄 To-Do App
-                        Wireframe (PDF)</a></li>
-                    <li><a href="class%20resources/TERMINAL%20COMMANDS%2025g.pdf" target="_blank">📄 Terminal Commands
-                        Cheat Sheet (PDF)</a></li>
-                </ul>
-                <span class="status-badge status-completed">✓ Completed</span>
-            </div>
+				<div class="lesson-section">
+					<h3>📅 Tuesday</h3>
+					<p>GSD app - front end.</p>
+					<span class="status-badge status-completed">✓ Completed</span>
+				</div>
 
-            <div class="lesson-section">
-                <h3>📅 Tuesday (Tomorrow)</h3>
-                <p>Front end building.</p>
-                <span class="status-badge status-upcoming">⏱️ Upcoming</span>
-            </div>
+				<div class="lesson-section">
+					<h3>📅 Friday</h3>
+					<p>Lesson with Jaxson.</p>
+					<ul>
+						<li>JavaScript Refresher</li>
+						<li>HTTPS</li>
+						<li>Postman</li>
+						<li>API</li>
+					</ul>
+					<span class="status-badge status-in-progress">⏱️ In Progress</span>
+				</div>
+			</div>
+		</main>
 
-            <div class="lesson-section">
-                <h3>📅 Friday</h3>
-                <p>Back end coding with Jaxon!</p>
-                <span class="status-badge status-upcoming">⏱️ Upcoming</span>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-wave">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path
-                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z">
-                </path>
-            </svg>
-        </div>
-        <div class="footer-content">
-            <p>© 2026 Quokka Squad 25g • Diploma of IT Back End Web Development</p>
-            <p>
-                <a href="index.html" style="color: inherit; text-decoration: none; font-weight: 600;">Home</a> •
-                <a href="schedule.html" style="color: inherit; text-decoration: none; font-weight: 600;">Schedule &amp;
-                    Checklist</a> •
-                <a href="lessons.html" style="color: inherit; text-decoration: none; font-weight: 600;">Lessons</a> •
-                <a href="resources.html" style="color: inherit; text-decoration: none; font-weight: 600;">Resources</a>
-                •
-                <a href="contact.html" style="color: inherit; text-decoration: none; font-weight: 600;">Contact</a>
-            </p>
-            <p>Equinim College • Intake 25g</p>
-        </div>
-    </footer>
-
-</body>
-
+		<footer class="footer">
+			<div class="footer-wave">
+				<svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path
+						d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+					></path>
+				</svg>
+			</div>
+			<div class="footer-content">
+				<p>© 2026 Quokka Squad 25g • Diploma of IT Back End Web Development</p>
+				<p>
+					<a
+						href="index.html"
+						style="color: inherit; text-decoration: none; font-weight: 600"
+						>Home</a
+					>
+					•
+					<a
+						href="schedule.html"
+						style="color: inherit; text-decoration: none; font-weight: 600"
+						>Schedule &amp; Checklist</a
+					>
+					•
+					<a
+						href="lessons.html"
+						style="color: inherit; text-decoration: none; font-weight: 600"
+						>Lessons</a
+					>
+					•
+					<a
+						href="resources.html"
+						style="color: inherit; text-decoration: none; font-weight: 600"
+						>Resources</a
+					>
+					•
+					<a
+						href="contact.html"
+						style="color: inherit; text-decoration: none; font-weight: 600"
+						>Contact</a
+					>
+				</p>
+				<p>Equinim College • Intake 25g</p>
+			</div>
+		</footer>
+	</body>
 </html>
